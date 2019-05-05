@@ -4,3 +4,7 @@
 .Rbuildignore
 .Ruserdata
 config.txt
+
+conda/
+
+models/
