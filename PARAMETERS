@@ -1,0 +1,5 @@
+RSuiteVersion: 0.36.252
+RVersion: 3.5
+Project: keras_and_shiny-tutorial
+Repositories: MRAN[2018-09-05]
+Artifacts: config_templ.txt, conda
