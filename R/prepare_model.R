@@ -20,7 +20,7 @@ args <- args_parser()
 ###############################################################################
 
 # Force using local Python environment
-reticulate::use_python(python = file.path(script_path, "..", "conda"),
+reticulate::use_python(python = file.path(script_path, "..", "conda", "bin", "python3"),
                        require = TRUE)
 loginfo("Python initialized.")
 
