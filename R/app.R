@@ -20,9 +20,13 @@ args <- args_parser()
 ###############################################################################
 # Force using local Python environment
 # reticulate::use_python(python = file.path(script_path, "..", "conda"), require = TRUE)
-reticulate::use_python(python = file.path(script_path, "..", "conda", "bin",
-                                          "python3"),
-                       require = TRUE)
+if (.Platform$OS.type == "unix") {
+  reticulate::use_python(python = file.path(script_path, "..", "conda", "bin",
+                                            "python3"), require = TRUE)
+} else if (.Platform$OS.type == "windows") {
+  reticulate::use_python(python = file.path(script_path, "..", "conda"), require = TRUE)
+}
+
 loginfo("Python initialized.")
 
 library(Application)
